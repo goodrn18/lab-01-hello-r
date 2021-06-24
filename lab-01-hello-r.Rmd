@@ -33,7 +33,6 @@ ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
   geom_point()
 ```
 
-And next calculate the correlation between `x` and `y` in this dataset:
 
 ```{r cor-dino}
 dino_data %>%
@@ -77,3 +76,18 @@ Use the convention from above to name them appropriately.
 Add code and narrative as needed.
 
 To add R chunks either type out the backticks, curly braces, and the letter `r` or use the Insert chunk button above, green C+.
+
+## 
+
+filter()<-extracting rows
+
+group_by() <-grouping dataset as assigned column 
+ungroup()<- This function cancels the grouping 
+
+summarize() <- This is often used with group_by().
+This function can print the output according to the 
+group_by().
+
+facet_grid(y~x,...)<- variable y as a row, variable x as a column  
+facet_wrap(x,... )<-when the variable is only one
+And next calculate the correlation between `x` and `y` in this dataset:
