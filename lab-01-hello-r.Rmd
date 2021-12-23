@@ -1,7 +1,7 @@
 ---
 title: "Lab 01 - Hello R"
-author: "Insert your name here"
-date: "Insert date here"
+author: "Rachel Good"
+date: "12/21/2021"
 output: github_document
 ---
 
@@ -16,12 +16,9 @@ library(datasauRus)
 
 ### Exercise 1
 
-Remove this text, and add your answer for Exercise 1 here.
+The datasaurus dozen file has 1846 rows and 3 variables/columns.
 
 ### Exercise 2
-
-The answers for this exercise are given for you below.
-But you should clean up some of the narrative so that it only includes what you want to turn in.
 
 First let's plot the data in the dino dataset:
 
