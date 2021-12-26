@@ -1,7 +1,7 @@
 Lab 01 - Hello R
 ================
 Rachel Good
-12/21/2021
+12/26/2021
 
 ## Load packages and data
 
@@ -17,10 +17,6 @@ library(datasauRus)
 The datasaurus dozen file has 1846 rows and 3 variables/columns.
 
 ### Exercise 2
-
-The answers for this exercise are given for you below. But you should
-clean up some of the narrative so that it only includes what you want to
-turn in.
 
 First let’s plot the data in the dino dataset:
 
@@ -48,22 +44,43 @@ dino_data %>%
 
 ### Exercise 3
 
-Add code and narrative as needed. Note that the R chunks are labeled
-with `plot-star` and `cor-star` to provide spaces to place the code for
-plotting and calculating the correlation coefficient. To finish, clean
-up the narrative by removing these instructions.
+``` r
+#Would add plot data here
+```
 
-I’m some filler text, you should replace me with more meaningful text…
+There is a chunk above for adding plot code, and a chunk below for
+adding correlation code.
+
+``` r
+# Would add correlation code here
+```
 
 ### Exercise 4
 
-Add code and narrative as needed. Note that two R chunks are given but
-they are not labeled. Use the convention from above to name them
-appropriately.
+Here I practice naming the chunks and adding the code. Note to self: The
+names do not have to say star - star can be anything
+
+``` r
+dino_data <- datasaurus_dozen %>%
+  filter(dataset == "dino")
+
+ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
+  geom_point()
+```
+
+![](lab-01-hello-r_files/figure-gfm/plot-star1-1.png)<!-- -->
+
+``` r
+dino_data %>%
+  summarize(r = cor(x, y))
+```
+
+    ## # A tibble: 1 x 1
+    ##         r
+    ##     <dbl>
+    ## 1 -0.0645
 
 ### Exercise 5
-
-Add code and narrative as needed.
 
 To add R chunks either type out the backticks, curly braces, and the
 letter `r` or use the Insert chunk button above, green C+.
