@@ -45,40 +45,32 @@ dino_data %>%
 ### Exercise 3
 
 ``` r
-#Would add plot data here
+star_data <- datasaurus_dozen %>%
+  filter(dataset == "star")
+
+ggplot(data = star_data, mapping = aes(x = x, y = y)) +
+  geom_point()
 ```
+
+![](lab-01-hello-r_files/figure-gfm/plot-star-1.png)<!-- -->
 
 There is a chunk above for adding plot code, and a chunk below for
 adding correlation code.
 
 ``` r
-# Would add correlation code here
-```
-
-### Exercise 4
-
-Here I practice naming the chunks and adding the code. Note to self: The
-names do not have to say star - star can be anything
-
-``` r
-dino_data <- datasaurus_dozen %>%
-  filter(dataset == "dino")
-
-ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
-  geom_point()
-```
-
-![](lab-01-hello-r_files/figure-gfm/plot-star1-1.png)<!-- -->
-
-``` r
-dino_data %>%
+star_data %>%
   summarize(r = cor(x, y))
 ```
 
     ## # A tibble: 1 x 1
     ##         r
     ##     <dbl>
-    ## 1 -0.0645
+    ## 1 -0.0630
+
+### Exercise 4
+
+Here I practice naming the chunks and adding the code. Note to self: The
+names do not have to say star - star can be anything
 
 ### Exercise 5
 
