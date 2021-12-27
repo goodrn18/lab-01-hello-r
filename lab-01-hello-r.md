@@ -94,8 +94,43 @@ circle_data %>%
 
 ### Exercise 5
 
-To add R chunks either type out the backticks, curly braces, and the
-letter `r` or use the Insert chunk button above, green C+.
+``` r
+ggplot(datasaurus_dozen, aes(x = x, y = y, color = dataset))+
+  geom_point()+
+  facet_wrap(~ dataset, ncol = 3) +
+  theme(legend.position = "none")
+```
+
+![](lab-01-hello-r_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
+
+``` r
+datasaurus_dozen %>%
+  group_by(dataset) %>%
+  summarize(r = cor(x, y)) %>%
+  print(13)
+```
+
+    ## # A tibble:
+    ## #   13 x 2
+    ##    dataset   
+    ##    <chr>     
+    ##  1 away      
+    ##  2 bullseye  
+    ##  3 circle    
+    ##  4 dino      
+    ##  5 dots      
+    ##  6 h_lines   
+    ##  7 high_lines
+    ##  8 slant_down
+    ##  9 slant_up  
+    ## 10 star      
+    ## 11 v_lines   
+    ## 12 wide_lines
+    ## 13 x_shape   
+    ## # ... with 1
+    ## #   more
+    ## #   variable:
+    ## #   r <dbl>
 
 ## Bonus Tips by Yoo Ri
 
