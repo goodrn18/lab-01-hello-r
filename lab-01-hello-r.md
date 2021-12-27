@@ -54,8 +54,8 @@ ggplot(data = star_data, mapping = aes(x = x, y = y)) +
 
 ![](lab-01-hello-r_files/figure-gfm/plot-star-1.png)<!-- -->
 
-There is a chunk above for adding plot code, and a chunk below for
-adding correlation code.
+The star data has a similar correlation to the dino data, only differing
+by thousandths.
 
 ``` r
 star_data %>%
@@ -69,8 +69,28 @@ star_data %>%
 
 ### Exercise 4
 
-Here I practice naming the chunks and adding the code. Note to self: The
-names do not have to say star - star can be anything
+The circle data set has a slightly stronger correlation, however still
+only differs by a couple thousandths.
+
+``` r
+circle_data <- datasaurus_dozen %>%
+  filter(dataset == "circle")
+
+ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
+  geom_point()
+```
+
+![](lab-01-hello-r_files/figure-gfm/plot-circle-1.png)<!-- -->
+
+``` r
+circle_data %>%
+  summarize(r = cor(x, y))
+```
+
+    ## # A tibble: 1 x 1
+    ##         r
+    ##     <dbl>
+    ## 1 -0.0683
 
 ### Exercise 5
 
